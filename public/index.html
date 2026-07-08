@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#050706">
+    <title>NIMCheck</title>
+    <link rel="stylesheet" href="/styles.css?v=dark-ui-2">
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div class="brand-block">
+          <div class="brand-mark" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div>
+            <p class="eyebrow">NVIDIA NIM endpoint monitor</p>
+            <h1>NIMCheck</h1>
+          </div>
+        </div>
+
+        <div class="toolbar" aria-label="dashboard actions">
+          <button class="icon-button" id="refreshButton" type="button" title="Refresh status">
+            <span>Refresh</span>
+          </button>
+          <label class="toggle">
+            <input id="autoRefresh" type="checkbox" checked>
+            <span>Auto</span>
+          </label>
+        </div>
+      </header>
+
+      <section class="status-band" aria-label="status summary">
+        <article class="metric">
+          <span class="metric-label">Usable</span>
+          <strong id="usableMetric">-</strong>
+          <small id="usableSub">-</small>
+        </article>
+        <article class="metric">
+          <span class="metric-label">p50</span>
+          <strong id="p50Metric">-</strong>
+          <small>latency</small>
+        </article>
+        <article class="metric">
+          <span class="metric-label">p95</span>
+          <strong id="p95Metric">-</strong>
+          <small>latency</small>
+        </article>
+        <article class="metric wide">
+          <span class="metric-label">Last check</span>
+          <strong id="lastCheckMetric">-</strong>
+          <small id="nextCheckMetric">-</small>
+        </article>
+      </section>
+
+      <section class="notice hidden" id="notice" role="status"></section>
+
+      <section class="add-model-panel" aria-label="add model">
+        <form class="model-form" id="modelForm">
+          <label>
+            <span>Model ID</span>
+            <input id="modelIdInput" name="modelId" type="text" placeholder="provider/model-name" autocomplete="off" required>
+          </label>
+          <label>
+            <span>Name</span>
+            <input id="modelNameInput" name="modelName" type="text" placeholder="Optional" autocomplete="off">
+          </label>
+          <button class="add-button" type="submit">Add</button>
+        </form>
+        <div class="model-help" id="modelHelp">Local watchlist</div>
+      </section>
+
+      <section class="control-row" aria-label="filters">
+        <div class="tabs" id="tabs">
+          <button class="tab is-active" data-filter="all" type="button">All</button>
+          <button class="tab" data-filter="healthy" type="button">Healthy</button>
+          <button class="tab" data-filter="slow" type="button">Slow</button>
+          <button class="tab" data-filter="down" type="button">Down</button>
+          <button class="tab" data-filter="watching" type="button">Watch</button>
+        </div>
+        <div class="timestamp" id="serverStamp">-</div>
+      </section>
+
+      <section class="model-grid" id="modelGrid" aria-live="polite"></section>
+    </main>
+
+    <template id="modelCardTemplate">
+      <article class="model-card">
+        <div class="model-head">
+          <div>
+            <div class="provider"></div>
+            <h2></h2>
+            <p class="model-id"></p>
+          </div>
+          <span class="status-pill"><i></i><b></b></span>
+        </div>
+
+        <div class="model-stats">
+          <div>
+            <span>TTFT</span>
+            <strong data-field="ttft">-</strong>
+          </div>
+          <div>
+            <span>Total latency</span>
+            <strong data-field="totalLatency">-</strong>
+          </div>
+          <div>
+            <span>Tokens/sec</span>
+            <strong data-field="tps">-</strong>
+          </div>
+          <div>
+            <span>Timeout rate</span>
+            <strong data-field="timeoutRate">-</strong>
+          </div>
+          <div>
+            <span>5xx rate</span>
+            <strong data-field="http5xxRate">-</strong>
+          </div>
+          <div>
+            <span>429 rate</span>
+            <strong data-field="http429Rate">-</strong>
+          </div>
+          <div>
+            <span>P95 latency</span>
+            <strong data-field="modelP95">-</strong>
+          </div>
+          <div>
+            <span>In-flight</span>
+            <strong data-field="inFlight">-</strong>
+          </div>
+        </div>
+
+        <canvas class="sparkline" width="360" height="80" aria-label="latency history"></canvas>
+
+        <div class="model-foot">
+          <p data-field="message"></p>
+          <button class="mini-button" type="button" hidden>Remove</button>
+        </div>
+      </article>
+    </template>
+
+    <script type="module" src="/app.js?v=dark-ui-2"></script>
+  </body>
+</html>

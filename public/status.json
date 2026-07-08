@@ -1,0 +1,438 @@
+{
+  "configured": true,
+  "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+  "checking": false,
+  "generatedAt": "2026-07-08T10:23:28.834Z",
+  "lastRunStartedAt": "2026-07-08T10:23:06.553Z",
+  "lastRunFinishedAt": "2026-07-08T10:23:28.834Z",
+  "nextRunAt": "2026-07-08T10:53:28.836Z",
+  "checkReason": "local",
+  "settings": {
+    "checkIntervalMs": 1800000,
+    "requestTimeoutMs": 20000,
+    "slowThresholdMs": 8000,
+    "modelConcurrency": 3,
+    "probeMaxTokens": 32,
+    "historyLimit": 48
+  },
+  "summary": {
+    "total": 7,
+    "completed": 7,
+    "healthy": 3,
+    "usable": 4,
+    "slow": 1,
+    "down": 3,
+    "p50LatencyMs": 2094,
+    "p95LatencyMs": 11189,
+    "inFlightRequests": 0,
+    "peakInFlightRequests": 3
+  },
+  "models": [
+    {
+      "id": "openai/gpt-oss-120b",
+      "name": "GPT-OSS-120B",
+      "provider": "OpenAI",
+      "tier": "Free Endpoint",
+      "latest": {
+        "status": "healthy",
+        "message": "Completed normally.",
+        "checkedAt": "2026-07-08T10:23:06.558Z",
+        "latencyMs": 610,
+        "totalLatencyMs": 610,
+        "ttftMs": null,
+        "tokensPerSecond": 52.5,
+        "outputTokens": 32,
+        "httpStatus": 200,
+        "inFlightRequests": 0,
+        "peakInFlightRequests": 3,
+        "answerPreview": "",
+        "rawError": "",
+        "metrics": {
+          "ttftMs": null,
+          "totalLatencyMs": 610,
+          "tokensPerSecond": 52.5,
+          "outputTokens": 32,
+          "timeoutRate": 0,
+          "http5xxRate": 0,
+          "http429Rate": 0,
+          "p95LatencyMs": 610,
+          "inFlightRequests": 0,
+          "peakInFlightRequests": 3
+        }
+      },
+      "history": [
+        {
+          "status": "healthy",
+          "latencyMs": 610,
+          "totalLatencyMs": 610,
+          "ttftMs": null,
+          "tokensPerSecond": 52.5,
+          "outputTokens": 32,
+          "checkedAt": "2026-07-08T10:23:06.558Z",
+          "httpStatus": 200
+        }
+      ],
+      "metrics": {
+        "ttftMs": null,
+        "totalLatencyMs": 610,
+        "tokensPerSecond": 52.5,
+        "outputTokens": 32,
+        "timeoutRate": 0,
+        "http5xxRate": 0,
+        "http429Rate": 0,
+        "p95LatencyMs": 610,
+        "inFlightRequests": 0,
+        "peakInFlightRequests": 3
+      },
+      "consecutiveFailures": 0
+    },
+    {
+      "id": "moonshotai/kimi-k2.6",
+      "name": "Kimi K2.6",
+      "provider": "Moonshot AI",
+      "tier": "Free Endpoint",
+      "latest": {
+        "status": "error",
+        "message": "Function '23d4f03a-b8a6-4adb-a183-7daa083a09cc': Not found for account 'xu2fbWS_fz7vJDO7CcnL_IeXk8MeoFIm0Ff8XxQxuEI'",
+        "checkedAt": "2026-07-08T10:23:06.735Z",
+        "latencyMs": 247,
+        "totalLatencyMs": 247,
+        "ttftMs": null,
+        "tokensPerSecond": null,
+        "outputTokens": null,
+        "httpStatus": 404,
+        "inFlightRequests": 0,
+        "peakInFlightRequests": 3,
+        "answerPreview": "",
+        "rawError": "{\"status\":404,\"title\":\"Not Found\",\"detail\":\"Function '23d4f03a-b8a6-4adb-a183-7daa083a09cc': Not found for account 'xu2fbWS_fz7vJDO7CcnL_IeXk8MeoFIm0Ff8XxQxuEI'\"}",
+        "metrics": {
+          "ttftMs": null,
+          "totalLatencyMs": 247,
+          "tokensPerSecond": null,
+          "outputTokens": null,
+          "timeoutRate": 0,
+          "http5xxRate": 0,
+          "http429Rate": 0,
+          "p95LatencyMs": 247,
+          "inFlightRequests": 0,
+          "peakInFlightRequests": 3
+        }
+      },
+      "history": [
+        {
+          "status": "error",
+          "latencyMs": 247,
+          "totalLatencyMs": 247,
+          "ttftMs": null,
+          "tokensPerSecond": null,
+          "outputTokens": null,
+          "checkedAt": "2026-07-08T10:23:06.735Z",
+          "httpStatus": 404
+        }
+      ],
+      "metrics": {
+        "ttftMs": null,
+        "totalLatencyMs": 247,
+        "tokensPerSecond": null,
+        "outputTokens": null,
+        "timeoutRate": 0,
+        "http5xxRate": 0,
+        "http429Rate": 0,
+        "p95LatencyMs": 247,
+        "inFlightRequests": 0,
+        "peakInFlightRequests": 3
+      },
+      "consecutiveFailures": 1
+    },
+    {
+      "id": "deepseek-ai/deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "provider": "DeepSeek",
+      "tier": "Free Endpoint",
+      "latest": {
+        "status": "healthy",
+        "message": "Completed normally.",
+        "checkedAt": "2026-07-08T10:23:06.737Z",
+        "latencyMs": 2094,
+        "totalLatencyMs": 2094,
+        "ttftMs": 2093,
+        "tokensPerSecond": 10,
+        "outputTokens": 21,
+        "httpStatus": 200,
+        "inFlightRequests": 0,
+        "peakInFlightRequests": 3,
+        "answerPreview": "We need to output exactly the numbers 1 through 16, separated by spaces. No extra text. So: \"1 2 3 4 ",
+        "rawError": "",
+        "metrics": {
+          "ttftMs": 2093,
+          "totalLatencyMs": 2094,
+          "tokensPerSecond": 10,
+          "outputTokens": 21,
+          "timeoutRate": 0,
+          "http5xxRate": 0,
+          "http429Rate": 0,
+          "p95LatencyMs": 2094,
+          "inFlightRequests": 0,
+          "peakInFlightRequests": 3
+        }
+      },
+      "history": [
+        {
+          "status": "healthy",
+          "latencyMs": 2094,
+          "totalLatencyMs": 2094,
+          "ttftMs": 2093,
+          "tokensPerSecond": 10,
+          "outputTokens": 21,
+          "checkedAt": "2026-07-08T10:23:06.737Z",
+          "httpStatus": 200
+        }
+      ],
+      "metrics": {
+        "ttftMs": 2093,
+        "totalLatencyMs": 2094,
+        "tokensPerSecond": 10,
+        "outputTokens": 21,
+        "timeoutRate": 0,
+        "http5xxRate": 0,
+        "http429Rate": 0,
+        "p95LatencyMs": 2094,
+        "inFlightRequests": 0,
+        "peakInFlightRequests": 3
+      },
+      "consecutiveFailures": 0
+    },
+    {
+      "id": "deepseek-ai/deepseek-v4-pro",
+      "name": "DeepSeek V4 Pro",
+      "provider": "DeepSeek",
+      "tier": "Free Endpoint",
+      "latest": {
+        "status": "timeout",
+        "message": "Request timed out.",
+        "checkedAt": "2026-07-08T10:23:06.990Z",
+        "latencyMs": 20005,
+        "totalLatencyMs": 20005,
+        "ttftMs": null,
+        "tokensPerSecond": null,
+        "outputTokens": null,
+        "httpStatus": null,
+        "inFlightRequests": 0,
+        "peakInFlightRequests": 3,
+        "answerPreview": "",
+        "rawError": "",
+        "metrics": {
+          "ttftMs": null,
+          "totalLatencyMs": 20005,
+          "tokensPerSecond": null,
+          "outputTokens": null,
+          "timeoutRate": 100,
+          "http5xxRate": 0,
+          "http429Rate": 0,
+          "p95LatencyMs": 20005,
+          "inFlightRequests": 0,
+          "peakInFlightRequests": 3
+        }
+      },
+      "history": [
+        {
+          "status": "timeout",
+          "latencyMs": 20005,
+          "totalLatencyMs": 20005,
+          "ttftMs": null,
+          "tokensPerSecond": null,
+          "outputTokens": null,
+          "checkedAt": "2026-07-08T10:23:06.990Z",
+          "httpStatus": null
+        }
+      ],
+      "metrics": {
+        "ttftMs": null,
+        "totalLatencyMs": 20005,
+        "tokensPerSecond": null,
+        "outputTokens": null,
+        "timeoutRate": 100,
+        "http5xxRate": 0,
+        "http429Rate": 0,
+        "p95LatencyMs": 20005,
+        "inFlightRequests": 0,
+        "peakInFlightRequests": 3
+      },
+      "consecutiveFailures": 1
+    },
+    {
+      "id": "nvidia/nemotron-3-ultra-550b-a55b",
+      "name": "Nemotron 3 Ultra 550B A55B",
+      "provider": "NVIDIA",
+      "tier": "Free Endpoint",
+      "latest": {
+        "status": "healthy",
+        "message": "Completed normally.",
+        "checkedAt": "2026-07-08T10:23:07.169Z",
+        "latencyMs": 4607,
+        "totalLatencyMs": 4607,
+        "ttftMs": 4606,
+        "tokensPerSecond": 4.6,
+        "outputTokens": 21,
+        "httpStatus": 200,
+        "inFlightRequests": 0,
+        "peakInFlightRequests": 3,
+        "answerPreview": "The user wants: \"Output exactly the numbers 1 through 16, separated by spaces.\" So we need to output \"1 2 3 ",
+        "rawError": "",
+        "metrics": {
+          "ttftMs": 4606,
+          "totalLatencyMs": 4607,
+          "tokensPerSecond": 4.6,
+          "outputTokens": 21,
+          "timeoutRate": 0,
+          "http5xxRate": 0,
+          "http429Rate": 0,
+          "p95LatencyMs": 4607,
+          "inFlightRequests": 0,
+          "peakInFlightRequests": 3
+        }
+      },
+      "history": [
+        {
+          "status": "healthy",
+          "latencyMs": 4607,
+          "totalLatencyMs": 4607,
+          "ttftMs": 4606,
+          "tokensPerSecond": 4.6,
+          "outputTokens": 21,
+          "checkedAt": "2026-07-08T10:23:07.169Z",
+          "httpStatus": 200
+        }
+      ],
+      "metrics": {
+        "ttftMs": 4606,
+        "totalLatencyMs": 4607,
+        "tokensPerSecond": 4.6,
+        "outputTokens": 21,
+        "timeoutRate": 0,
+        "http5xxRate": 0,
+        "http429Rate": 0,
+        "p95LatencyMs": 4607,
+        "inFlightRequests": 0,
+        "peakInFlightRequests": 3
+      },
+      "consecutiveFailures": 0
+    },
+    {
+      "id": "z-ai/glm-5.2",
+      "name": "GLM-5.2",
+      "provider": "Z.ai",
+      "tier": "Free Endpoint",
+      "latest": {
+        "status": "timeout",
+        "message": "Request timed out.",
+        "checkedAt": "2026-07-08T10:23:08.832Z",
+        "latencyMs": 20002,
+        "totalLatencyMs": 20002,
+        "ttftMs": null,
+        "tokensPerSecond": null,
+        "outputTokens": null,
+        "httpStatus": null,
+        "inFlightRequests": 0,
+        "peakInFlightRequests": 3,
+        "answerPreview": "",
+        "rawError": "",
+        "metrics": {
+          "ttftMs": null,
+          "totalLatencyMs": 20002,
+          "tokensPerSecond": null,
+          "outputTokens": null,
+          "timeoutRate": 100,
+          "http5xxRate": 0,
+          "http429Rate": 0,
+          "p95LatencyMs": 20002,
+          "inFlightRequests": 0,
+          "peakInFlightRequests": 3
+        }
+      },
+      "history": [
+        {
+          "status": "timeout",
+          "latencyMs": 20002,
+          "totalLatencyMs": 20002,
+          "ttftMs": null,
+          "tokensPerSecond": null,
+          "outputTokens": null,
+          "checkedAt": "2026-07-08T10:23:08.832Z",
+          "httpStatus": null
+        }
+      ],
+      "metrics": {
+        "ttftMs": null,
+        "totalLatencyMs": 20002,
+        "tokensPerSecond": null,
+        "outputTokens": null,
+        "timeoutRate": 100,
+        "http5xxRate": 0,
+        "http429Rate": 0,
+        "p95LatencyMs": 20002,
+        "inFlightRequests": 0,
+        "peakInFlightRequests": 3
+      },
+      "consecutiveFailures": 1
+    },
+    {
+      "id": "qwen/qwen3.5-397b-a17b",
+      "name": "Qwen3.5-397B-A17B",
+      "provider": "Qwen",
+      "tier": "Free Endpoint",
+      "latest": {
+        "status": "slow",
+        "message": "Completed, but slower than threshold.",
+        "checkedAt": "2026-07-08T10:23:11.776Z",
+        "latencyMs": 11189,
+        "totalLatencyMs": 11189,
+        "ttftMs": 10884,
+        "tokensPerSecond": 1.3,
+        "outputTokens": 14,
+        "httpStatus": 200,
+        "inFlightRequests": 0,
+        "peakInFlightRequests": 3,
+        "answerPreview": "1 2 3 4 5 6 7 8 9 10 11 12 13 14",
+        "rawError": "",
+        "metrics": {
+          "ttftMs": 10884,
+          "totalLatencyMs": 11189,
+          "tokensPerSecond": 1.3,
+          "outputTokens": 14,
+          "timeoutRate": 0,
+          "http5xxRate": 0,
+          "http429Rate": 0,
+          "p95LatencyMs": 11189,
+          "inFlightRequests": 0,
+          "peakInFlightRequests": 3
+        }
+      },
+      "history": [
+        {
+          "status": "slow",
+          "latencyMs": 11189,
+          "totalLatencyMs": 11189,
+          "ttftMs": 10884,
+          "tokensPerSecond": 1.3,
+          "outputTokens": 14,
+          "checkedAt": "2026-07-08T10:23:11.776Z",
+          "httpStatus": 200
+        }
+      ],
+      "metrics": {
+        "ttftMs": 10884,
+        "totalLatencyMs": 11189,
+        "tokensPerSecond": 1.3,
+        "outputTokens": 14,
+        "timeoutRate": 0,
+        "http5xxRate": 0,
+        "http429Rate": 0,
+        "p95LatencyMs": 11189,
+        "inFlightRequests": 0,
+        "peakInFlightRequests": 3
+      },
+      "consecutiveFailures": 0
+    }
+  ]
+}

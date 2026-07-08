@@ -1,0 +1,44 @@
+[
+  {
+    "id": "openai/gpt-oss-120b",
+    "name": "GPT-OSS-120B",
+    "provider": "OpenAI",
+    "tier": "Free Endpoint"
+  },
+  {
+    "id": "moonshotai/kimi-k2.6",
+    "name": "Kimi K2.6",
+    "provider": "Moonshot AI",
+    "tier": "Free Endpoint"
+  },
+  {
+    "id": "deepseek-ai/deepseek-v4-flash",
+    "name": "DeepSeek V4 Flash",
+    "provider": "DeepSeek",
+    "tier": "Free Endpoint"
+  },
+  {
+    "id": "deepseek-ai/deepseek-v4-pro",
+    "name": "DeepSeek V4 Pro",
+    "provider": "DeepSeek",
+    "tier": "Free Endpoint"
+  },
+  {
+    "id": "nvidia/nemotron-3-ultra-550b-a55b",
+    "name": "Nemotron 3 Ultra 550B A55B",
+    "provider": "NVIDIA",
+    "tier": "Free Endpoint"
+  },
+  {
+    "id": "z-ai/glm-5.2",
+    "name": "GLM-5.2",
+    "provider": "Z.ai",
+    "tier": "Free Endpoint"
+  },
+  {
+    "id": "qwen/qwen3.5-397b-a17b",
+    "name": "Qwen3.5-397B-A17B",
+    "provider": "Qwen",
+    "tier": "Free Endpoint"
+  }
+]

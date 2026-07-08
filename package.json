@@ -1,0 +1,15 @@
+{
+  "name": "nimcheck",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Status dashboard for NVIDIA NIM free endpoint responsiveness.",
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/check-endpoints.js",
+    "start": "node scripts/serve-static.js",
+    "serve": "node scripts/serve-static.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
