@@ -63,7 +63,7 @@ function stopPolling() {
 async function loadStatus(options = {}) {
   els.refreshButton.disabled = true;
   try {
-    const response = await fetch(`/status.json?ts=${Date.now()}`, { cache: "no-store" });
+    const response = await fetch(`./status.json?ts=${Date.now()}`, { cache: "no-store" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     state.data = await response.json();
     render();
